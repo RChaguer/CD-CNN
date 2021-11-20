@@ -4,7 +4,8 @@ import pandas as pd
 import os
 import cv2
 from tf.keras.utils import image_dataset_from_directory
-from Utils import Normalization, Normalization_MSU, getX, getY, prepare_all_videos_v2
+from Utils import Normalization, Normalization_MSU, getX, getY, prepareAllVideosV2
+
 
 class NUAADataLoader():
     def __init__(self, source_path):
@@ -62,13 +63,12 @@ class NUAADataLoader():
         return self.x[label], self.y[label]
 
 
-class NUAADataLoader():
+class MSUDataLoader():
     def __init__(self, source_path):
         self.real_vid_loc = source_path+"/scene01/real/"
         self.attack_vid_loc = source_path+"/scene01/attack/"
         self.train_txt_file = source_path+"/train_sub_list.txt"
         self.test_txt_file = source_path+"/test_sub_list.txt"
-
 
     def preLoadData(self):
         ext = '.mp4'
@@ -94,7 +94,6 @@ class NUAADataLoader():
         self.train_df.columns = ["video", "label"]
         self.train_df.to_csv(r"train_combined.csv", index=None)
 
-
         with open("test_combined.txt", "w") as out:
             with open(self.test_txt_file, "r") as file:
                 for line in file:
@@ -117,10 +116,11 @@ class NUAADataLoader():
         self.test_df.columns = ["video", "label"]
         self.test_df.to_csv(r"test_combined.csv", index=None)
 
-    
     def dataLoad(self, train_frames=30, test_frames=1):
-        self.x_train, self.y_train = prepare_all_videos_v2(self.train_df, train_frames)
-        self.x_test, self.y_test = prepare_all_videos_v2(self.test_df, test_frames)
+        self.x_train, self.y_train = prepareAllVideosV2(
+            self.train_df, train_frames)
+        self.x_test, self.y_test = prepareAllVideosV2(
+            self.test_df, test_frames)
 
     def normalizeData(self):
         self.x_train = list(map(Normalization_MSU, self.x_train))

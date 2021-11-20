@@ -5,10 +5,10 @@ from tensorflow.keras.initializers import VarianceScaling
 from tensorflow.keras.layers import Layer
 
 
-class Conv2d_cd(Layer):
+class Conv2D_CD(Layer):
     def __init__(self, filters, kernel_size=3, strides=1,
                  padding='SAME', use_bias=False, theta=0.7):
-        super(Conv2d_cd, self).__init__()
+        super(Conv2D_CD, self).__init__()
         self.filters = filters
         self.kernel_size = kernel_size
         self.strides = strides

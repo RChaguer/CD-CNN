@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 
-from Conv2D_CD import Conv2d_cd
+from Layers import Conv2D_CD
 from tensorflow.keras import Model
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import MaxPooling2D, Input, Dense, Flatten, BatchNormalization, Activation, concatenate, Resizing, Flatten, Dropout
@@ -39,19 +39,19 @@ class CDCN(Model):
     def getBlock(self, theta):
         Block = Sequential()
 
-        Block.add(Conv2d_cd(128, padding='SAME', theta=theta))
+        Block.add(Conv2D_CD(128, padding='SAME', theta=theta))
         Block.add(BatchNormalization())
         Block.add(Activation('relu'))
         if self.l_dropout:
             Block.add(Dropout(self.dropout_val))
 
-        Block.add(Conv2d_cd(196, padding='SAME', theta=theta))
+        Block.add(Conv2D_CD(196, padding='SAME', theta=theta))
         Block.add(BatchNormalization())
         Block.add(Activation('relu'))
         if self.l_dropout:
             Block.add(Dropout(self.dropout_val))
 
-        Block.add(Conv2d_cd(128, padding='SAME', theta=theta))
+        Block.add(Conv2D_CD(128, padding='SAME', theta=theta))
         Block.add(BatchNormalization())
         Block.add(Activation('relu'))
         if self.l_dropout:
@@ -68,7 +68,7 @@ class CDCN(Model):
         conv = Sequential()
         if input_shape:
             conv.add(Input(input_shape))
-        conv.add(Conv2d_cd(nb_filters, padding='SAME', theta=theta))
+        conv.add(Conv2D_CD(nb_filters, padding='SAME', theta=theta))
         conv.add(BatchNormalization())
         conv.add(Activation('relu'))
         if self.g_dropout:
