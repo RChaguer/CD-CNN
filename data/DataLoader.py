@@ -3,8 +3,8 @@ import tensorflow as tf
 import pandas as pd
 import os
 import cv2
-from tf.keras.utils import image_dataset_from_directory
-from Utils import Normalization, Normalization_MSU, getX, getY, prepareAllVideosV2
+from tensorflow.keras.utils import image_dataset_from_directory
+from data.Utils import Normalization, Normalization_MSU, getX, getY, prepareAllVideosV2
 
 
 class NUAADataLoader():

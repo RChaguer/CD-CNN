@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-from tf.keras.metrics import BinaryAccuracy, Precision, Recall
+from tensorflow.keras.metrics import BinaryAccuracy, Precision, Recall
 
 from model.Model import CDCN
 from model.Loss import Accuracy, DepthLoss

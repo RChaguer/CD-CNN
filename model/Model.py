@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 
-from Layers import Conv2D_CD
+from model.Layers import Conv2D_CD
 from tensorflow.keras import Model
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import MaxPooling2D, Input, Dense, Flatten, BatchNormalization, Activation, concatenate, Resizing, Flatten, Dropout
