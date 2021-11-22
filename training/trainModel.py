@@ -6,8 +6,8 @@ from model.Model import CDCN
 from model.Loss import Accuracy, DepthLoss
 
 
-def trainModel(train, y_train=None, valid=None, ds_name="", theta=0.7, epochs=3, input_shape=(256, 256, 3), steps_per_epoch=None, use_nn=True):
-    model = CDCN(theta, input_shape=input_shape)
+def trainModel(train, y_train=None, valid=None, ds_name="", theta=0.7, epochs=3, input_shape=(256, 256, 3), steps_per_epoch=None, use_nn=True, g_dropout=True, l_dropout=False):
+    model = CDCN(theta, input_shape=input_shape, g_dropout=g_dropout, l_dropout=l_dropout)
 
     if use_nn:
         model.compile(loss='binary_crossentropy',

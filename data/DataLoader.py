@@ -47,7 +47,7 @@ class NUAADataLoader():
                 Normalization, num_parallel_calls=tf.data.AUTOTUNE)
 
     def splitValidationXY(self):
-        for ds, ds_path in self.data_dirs.items():
+        for ds, _ in self.data_dirs.items():
             self.x[ds] = self.valid[ds].map(
                 getX, num_parallel_calls=tf.data.AUTOTUNE)
             self.y[ds] = self.valid[ds].map(
