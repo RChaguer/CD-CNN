@@ -116,7 +116,7 @@ class MSUDataLoader():
         self.test_df.columns = ["video", "label"]
         self.test_df.to_csv(r"test_combined.csv", index=None)
 
-    def dataLoad(self, train_frames=30, test_frames=1):
+    def loadData(self, train_frames=30, test_frames=1):
         self.x_train, self.y_train = prepareAllVideosV2(
             self.train_df, train_frames)
         self.x_test, self.y_test = prepareAllVideosV2(

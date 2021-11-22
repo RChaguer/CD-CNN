@@ -19,7 +19,7 @@ def trainModel(train, y_train=None, valid=None, ds_name="", theta=0.7, epochs=3,
                       metrics=[Accuracy])
 
     # Train model
-    if y_train:
+    if y_train is not None:
         history = model.fit(train, y_train, epochs=epochs,
                             validation_data=valid, steps_per_epoch=steps_per_epoch)
     else:
@@ -32,7 +32,7 @@ def trainModel(train, y_train=None, valid=None, ds_name="", theta=0.7, epochs=3,
 
 def benchmarkModel(model, valid, y_valid=None):
     # Evalution Using Testing Set
-    if y_valid:
+    if y_valid is not None:
         scores = model.evaluate(valid, y_valid, verbose=1)
     else:
         scores = model.evaluate(valid, verbose=1)
