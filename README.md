@@ -26,8 +26,10 @@ This depository contains 4 folders:
     - Loss: describes some custom losses we created such as ContrastDepthLoss. This type of loss would normally be used, in addition to MSE loss, if we choose not to use the last neural network layers, else we use bianary cross-entropy loss.
     - Model: contains the complete structure of our FAS model.
 
-- trained_models: contains 4 trained models (3 for the NUAA dataset - Raw, FaceDetected and Normalized & 1 for MSU-MSFD). The used theta is defaulted to 0.7.
+- trained_models: contains 4 trained models (3 for the NUAA dataset - Raw, FaceDetected and Normalized & 1 for MSU-MSFD).
 
 - training: defines functions used to train and benchmark the model with simplicity and transparence.
 
-We have also 2 jupyter notebooks in this depository msu-msfd.ipynb and nuaa.ipynb, where we train and benchmark our model. In these notebooks, we train, validate, test and cross-test btween datasets our model.
+We also have 2 essential jupyter notebooks in this depository msu-msfd.ipynb and nuaa.ipynb, where we train and benchmark our model. In these notebooks, we train, validate, test and cross-test btween datasets our model.
+
+Finally, we added AbalationStudyOfTheta.ipynb, a jupyter notebook where we study the influence of the Theta hyper-parameter on our model. The used theta is then defaulted to 0.4 as it gives the highest performance and consistency.
