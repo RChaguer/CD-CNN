@@ -18,7 +18,7 @@ Facial anti-spoofing is the task of preventing false facial verification by usin
 
 This depository contains 4 folders:
 
-- data: contains a two DataLoader classes (one for each dataset used NUAA and MSU-MSFD). It also contains some essential helper and utility functions such as normalisation and image cropping.
+- (data)[data]: contains a two DataLoader classes (one for each dataset used NUAA and MSU-MSFD). It also contains some essential helper and utility functions such as normalisation and image cropping.
 
 - model: contains 3 files
 
