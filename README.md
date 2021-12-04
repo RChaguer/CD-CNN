@@ -32,6 +32,6 @@ This depository contains 4 folders:
 
 Moreover, we also have 2 essential jupyter notebooks in this depository [msu-msfd.ipynb](msu-msfd.ipynb) and [nuaa.ipynb](nuaa.ipynb), where we train and benchmark our model. In these notebooks, we train, validate, test and cross-test btween datasets our model.
 
-Furthermore, we added [AbalationStudyOfTheta.ipynb](AbalationStudyOfTheta.ipynb), a jupyter notebook where we study the influence of the Theta hyper-parameter on our model. The used theta is then defaulted to 0.4 as it gives the highest performance and consistency.
+Furthermore, we added [AblationStudyOfTheta.ipynb](AblationStudyOfTheta.ipynb), a jupyter notebook where we study the influence of the Theta hyper-parameter on our model. The used theta is then defaulted to 0.4 as it gives the highest performance and consistency.
 
 Finally, [CrossDatasetTesting.ipynb](CrossDatasetTesting.ipynb) is a jupyter notebook where we train our model on one of the four datasets and test it on all of them. Good performance would mean our model is robust against unknown attacks.
