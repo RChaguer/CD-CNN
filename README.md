@@ -1,5 +1,5 @@
 # Face Anti-Spoofing using Central Difference Convolution Neural Networks
-This project was conducted by AI major students of Illinois Institute of Technology. We would like to thank Dr. Yan Yan, our supervisor for this research project and for the "Machine Learning" course. We are extremely glad for this opportunity to learn about numerous fields and expand our knowledge and expertise in many fields such as convolutional neural networks.
+This project was conducted by AI major students of Illinois Institute of Technology. We would like to thank Dr. Yan Yan, our supervisor for this research project. We are extremely glad for this opportunity to learn about numerous fields and expand our knowledge and expertise in many fields such as convolutional neural networks.
 
 ## Team members
 
